@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently -k npm:dev:*",
     "dev:accounts": "nodemon -r dotenv/config -r esm ./src/services/accounts/index.js",
+    "dev:profiles": "nodemon -r dotenv/config -r esm ./src/services/profiles/index.js",
     "dev:gateway": "wait-on tcp:4001 &&  nodemon -r dotenv/config -r esm ./src/index.js"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "dependencies": {
     "@apollo/federation": "^0.13.2",
     "@apollo/gateway": "^0.13.2",
+    "apollo-datasource": "^0.7.0",
     "apollo-server": "^2.11.0",
     "apollo-server-express": "^2.11.0",
     "auth0": "^2.20.0",
@@ -24,7 +26,10 @@
     "graphql": "^14.6.0",
     "graphql-middleware": "^4.0.2",
     "graphql-shield": "^7.2.2",
+    "gravatar-url": "^3.1.0",
     "jwks-rsa": "^1.6.0",
+    "mongoose": "^5.7.11",
+    "validator": "^12.0.0",
     "wait-on": "^4.0.0"
   },
   "devDependencies": {
